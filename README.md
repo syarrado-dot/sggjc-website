@@ -1,1 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SGGJC Rayachoty</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+    :root {
+        --primary: #5b21b6;
+        --secondary: #7c3aed;
+        --accent: #f59e0b;
+        --light: #f8fafc;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #f0f4ff 0%, #fdf2f8 100%);
+        color: #333;
+        line-height: 1.7;
+    }
+
+    header {
+        background: linear-gradient(135deg, #5b21b6, #7c3aed);
+        color: white;
+        text-align: center;
+        padding: 80px 20px 100px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    header::after {
+        content: '';
+        position: absolute;
+        bottom: -50px;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        background: linear-gradient(transparent, #f8fafc);
+    }
+
+    .logo {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        border: 6px solid rgba(255,255,255,0.3);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        margin-bottom: 20px;
+        transition: transform 0.4s ease;
+    }
+
+    .logo:hover {
+        transform: scale(1.08) rotate(8deg);
+    }
+
+    header h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.8rem;
+        font-weight: 800;
+        margin-bottom: 10px;
+        text-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    header p {
+        font-size: 1.25rem;
+        opacity: 0.95;
+        margin-bottom: 25px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 16px 38px;
+        background: var(--accent);
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        box-shadow: 0 10px 25px rgba(245, 158, 11, 0.4);
+        transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(245, 158, 11, 0.5);
+        background: #fb923c;
+    }
+
+    section {
+        padding: 70px 20px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    h2 {
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.4rem;
+        color: var(--primary);
+        margin-bottom: 50px;
+        position: relative;
+    }
+
+    h2::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 4px;
+        background: var(--accent);
+        margin: 15px auto;
+        border-radius: 2px;
+    }
+
+    .card {
+        background: white;
+        padding: 28px;
+        margin: 15px 0;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        transition: all 0.4s ease;
+        border: 1px solid #f1f1f1;
+    }
+
+    .card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 20px 40px rgba(124, 58, 237, 0.15);
+        border-color: #e0d4ff;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+
+    /* Form Styling */
+    form {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    input, select, textarea {
+        padding: 14px 18px;
+        margin: 12px 0;
+        width: 100%;
+        border-radius: 12px;
+        border: 2px solid #e2e8f0;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+    }
+
+    input:focus, select:focus, textarea:focus {
+        outline: none;
+        border-color: var(--secondary);
+        box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.1);
+    }
+
+    button {
+        padding: 16px 40px;
+        background: linear-gradient(135deg, #7c3aed, #5b21b6);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        font-weight: 600;
+        width: 100%;
+        margin-top: 15px;
+        transition: all 0.3s ease;
+    }
+
+    button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(124, 58, 237, 0.4);
+    }
+
+    /* Additional Enhancements */
+    .highlight {
+        background: linear-gradient(90deg, #f3e8ff, #fae8e8);
+        padding: 25px;
+        border-radius: 16px;
+        margin: 30px 0;
+    }
+
+    footer {
+        background: linear-gradient(135deg, #4c1d95, #5b21b6);
+        color: white;
+        text-align: center;
+        padding: 40px 20px;
+        margin-top: 50px;
+    }
+
+    .contact-info p {
+        margin: 12px 0;
+        font-size: 1.05rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        header h1 {
+            font-size: 2.3rem;
+        }
+        h2 {
+            font-size: 2rem;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.jpg" class="logo" alt="College Logo">
+    <h1>Sri Gnanambika Girls Junior College</h1>
+    <p>Building Future Toppers in EAMCET, JEE & NEET</p>
+    <a class="btn" href="#admission">🔥 Apply Now for 2026-27</a>
+</header>
+
+<section>
+    <h2>About Us</h2>
+    <div class="card highlight">
+        <p>
+        Established in 2024, Sri Gnanambika Girls Junior College is committed to empowering young girls through quality education and competitive exam excellence. 
+        Located in Bose Nagar, Kothapeta, Rayachoty, our mission is to create confident, knowledgeable, and successful future professionals.
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2>Courses Offered</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>MPC</h3>
+            <p>Mathematics, Physics, Chemistry (2 Years)</p>
+        </div>
+        <div class="card">
+            <h3>BIPC</h3>
+            <p>Biology, Physics, Chemistry (2 Years)</p>
+        </div>
+        <div class="card">
+            <h3>MBIPC</h3>
+            <p>Mathematics, Biology, Physics, Chemistry (2 Years)</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Laboratories</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Physics Lab</h3>
+            <p>State-of-the-art lab with modern equipment for practical learning and concept clarity.</p>
+        </div>
+        <div class="card">
+            <h3>Chemistry Lab</h3>
+            <p>Advanced laboratory with safety measures and latest apparatus for hands-on experiments.</p>
+        </div>
+        <div class="card">
+            <h3>Biology Lab</h3>
+            <p>Well-equipped with microscopes, models, and specimens for detailed biological studies.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Special Training Programs</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>AP EAMCET Coaching</h3>
+            <p>Expert faculty, daily practice, and regular mock tests for top ranks.</p>
+        </div>
+        <div class="card">
+            <h3>JEE Mains Coaching</h3>
+            <p>Intensive problem-solving sessions and conceptual depth building.</p>
+        </div>
+        <div class="card">
+            <h3>NEET Coaching</h3>
+            <p>Complete preparation with previous year papers and doubt clearing sessions.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Facilities</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Hostel Facility</h3>
+            <p>Safe, secure & homely hostel with 24×7 supervision and healthy food.</p>
+        </div>
+        <div class="card">
+            <h3>Transport Facility</h3>
+            <p>Well-maintained college buses for safe commuting across Rayachoty and nearby areas.</p>
+        </div>
+        <div class="card">
+            <h3>Student Care</h3>
+            <p>Individual attention, regular parent interaction & holistic development.</p>
+        </div>
+    </div>
+</section>
+
+<section id="admission">
+    <h2>Admission Form 2026-27</h2>
+    <div class="card">
+        <form onsubmit="sendToWhatsApp(event)">
+            <input type="text" id="name" placeholder="Student Full Name" required>
+            <input type="text" id="parent" placeholder="Parent/Guardian Name" required>
+            <input type="tel" id="mobile" placeholder="Mobile Number (WhatsApp)" required>
+            
+            <select id="course" required>
+                <option value="">Select Course</option>
+                <option>MPC</option>
+                <option>BIPC</option>
+                <option>MBIPC</option>
+            </select>
+
+            <textarea id="address" rows="3" placeholder="Full Address"></textarea>
+
+            <button type="submit">🚀 Submit Application</button>
+        </form>
+    </div>
+</section>
+
+<section>
+    <h2>Contact Us</h2>
+    <div class="card contact-info">
+        <p><strong>Address:</strong> Bose Nagar, Kothapeta, Rayachoty, Annamayya District, Andhra Pradesh</p>
+        <p><strong>Phone:</strong> 90008 65691, 99595 01449</p>
+        <p><strong>WhatsApp:</strong> 
+            <a href="https://wa.me/919100775518" style="color: var(--secondary); font-weight: 600;">+91 91007 75518</a>
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p><strong>© 2026 Sri Gnanambika Girls Junior College | Rayachoty</strong></p>
+    <p>Empowering Girls • Shaping Futures</p>
+</footer>
+
+<script>
+function sendToWhatsApp(event) {
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let parent = document.getElementById("parent").value;
+    let mobile = document.getElementById("mobile").value;
+    let course = document.getElementById("course").value;
+    let address = document.getElementById("address").value || "Not provided";
+
+    let message = `🎓 *New Admission Enquiry* 🎓
+
+👩 *Student Name:* ${name}
+👨 *Parent Name:* ${parent}
+📞 *Mobile:* ${mobile}
+📚 *Course:* ${course}
+📍 *Address:* ${address}
+
+Interested in joining Sri Gnanambika Girls Junior College. Please contact me.`;
+
+    let url = "https://wa.me/919100775518?text=" + encodeURIComponent(message);
+    window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>
