@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SGGJC Rayachoty</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #eef2ff, #fdf2f8);
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #5b21b6, #7c3aed);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.logo {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 30px;
+    background: #f59e0b;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+section {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #5b21b6;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Form */
+input, select, textarea {
+    padding: 12px;
+    margin: 8px 0;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 14px;
+    background: #7c3aed;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+footer {
+    background: #5b21b6;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.jpg" class="logo">
+    <h1>Sri Gnanambika Girls Junior College</h1>
+    <p>Building Future Toppers in EAMCET, JEE & NEET</p>
+    <a class="btn" href="#admission">🔥 Apply Now</a>
+</header>
+
+<section>
+    <h2>About Us</h2>
+    <div class="card">
+        <p>
+        Established in 2024, Sri Gnanambika Girls Junior College is committed to empowering students through quality education.
+        Located in Bose Nagar, Kothapeta, Rayachoty, Annamayya District, our mission is to provide better education and shape future achievers.
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2>Courses Offered</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>MPC</h3>
+            <p>Mathematics, Physics, Chemistry (2 Years)</p>
+        </div>
+        <div class="card">
+            <h3>BIPC</h3>
+            <p>Biology, Physics, Chemistry (2 Years)</p>
+        </div>
+        <div class="card">
+            <h3>MBIPC</h3>
+            <p>Mathematics, Biology, Physics, Chemistry (2 Years)</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Laboratories</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Physics Lab</h3>
+            <p>Well-equipped lab to help students understand practical concepts through experiments and real-time demonstrations.</p>
+        </div>
+        <div class="card">
+            <h3>Chemistry Lab</h3>
+            <p>Modern lab facilities for safe and effective chemical experiments, enhancing practical knowledge.</p>
+        </div>
+        <div class="card">
+            <h3>Biology Lab</h3>
+            <p>Advanced lab with microscopes and specimens to support detailed biological studies.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Special Training Programs</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>AP EAMCET Coaching</h3>
+            <p>Focused preparation with expert guidance, practice tests, and exam strategies for top ranks.</p>
+        </div>
+        <div class="card">
+            <h3>JEE Mains Coaching</h3>
+            <p>Strong foundation with problem-solving techniques and regular mock tests for competitive success.</p>
+        </div>
+        <div class="card">
+            <h3>NEET Coaching</h3>
+            <p>Comprehensive training with concept clarity, previous papers, and doubt-solving sessions.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Facilities</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Hostel Facility</h3>
+            <p>Safe and secure hostel with proper care and supervision for students.</p>
+        </div>
+        <div class="card">
+            <h3>Transport Facility</h3>
+            <p>College vehicles available for safe and convenient travel.</p>
+        </div>
+        <div class="card">
+            <h3>Student Care</h3>
+            <p>Personal attention, guidance and supportive environment for every student.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Faculty</h2>
+    <div class="card">
+        <p>
+        Our institution is supported by highly experienced faculty dedicated to guiding students toward academic excellence and success in competitive exams.
+        </p>
+    </div>
+</section>
+
+<section id="admission">
+    <h2>Admission Form</h2>
+    <div class="card">
+        <form onsubmit="sendToWhatsApp(event)">
+            <input type="text" id="name" placeholder="Student Name" required>
+            <input type="text" id="parent" placeholder="Parent Name" required>
+            <input type="tel" id="mobile" placeholder="Mobile Number" required>
+
+            <select id="course" required>
+                <option value="">Select Course</option>
+                <option>MPC</option>
+                <option>BIPC</option>
+                <option>MBIPC</option>
+            </select>
+
+            <textarea id="address" placeholder="Address"></textarea>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</section>
+
+<section>
+    <h2>Contact Us</h2>
+    <div class="card">
+        <p><strong>Address:</strong> Bose Nagar, Kothapeta, Rayachoty, Annamayya District</p>
+        <p><strong>Phone:</strong> 9000865691, 9959501449</p>
+        <p><strong>WhatsApp:</strong> 
+            <a href="https://wa.me/919100775518">Chat Now</a>
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Sri Gnanambika Girls Junior College | Rayachoty</p>
+</footer>
+
+<script>
+function sendToWhatsApp(event) {
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let parent = document.getElementById("parent").value;
+    let mobile = document.getElementById("mobile").value;
+    let course = document.getElementById("course").value;
+    let address = document.getElementById("address").value;
+
+    let message = `🎓 *New Admission Enquiry* 🎓
+
+👩 Student Name: ${name}
+👨 Parent Name: ${parent}
+📞 Mobile: ${mobile}
+📚 Course: ${course}
+📍 Address: ${address}
+
+I am interested in joining Sri Gnanambika Girls Junior College. Please provide more details.`;
+
+    let url = "https://wa.me/919100775518?text=" + encodeURIComponent(message);
+
+    window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>
